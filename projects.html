@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/others.css"/>
+    <link rel="icon" type="image/x-icon" href="/images/icon.png">
+    <script src="scripts/current.js" defer></script>
+    <script src="scripts/toggleimages.js" defer></script>
+    <script src="scripts/imgopen.js" defer></script>
+</head>
+<body onload="set_current_page('projects')">
+    <div class="grid-container">
+        <div class="header_bg"></div>
+        <a class="signature" href="index.html">NicholasYoung.info</a>
+        <div class="current"></div>
+        <div class="inner"></div>
+        <div class="pages">
+            <a href="index.html" class="home" onmouseover="update_current_position_to_class('home')" onmouseleave="update_current_position()">Home</a>
+            <a href="skills.html" class="skills" onmouseover="update_current_position_to_class('skills')" onmouseleave="update_current_position()">Skills and Experience</a>
+            <a href="projects.html" class="projects" onmouseover="update_current_position_to_class('projects')" onmouseleave="update_current_position()">Projects</a>
+            <a href="hobbies.html" class="hobbies" onmouseover="update_current_position_to_class('hobbies')" onmouseleave="update_current_position()">Hobbies</a>
+            <a href="resume.html" class="resume" onmouseover="update_current_position_to_class('resume')" onmouseleave="update_current_position()">Resume</a>
+            <a href="valve.html" class="valve" onmouseover="update_current_position_to_class('valve')" onmouseleave="update_current_position()">Valve</a>
+        </div>
+        <div class="main content">
+            <div class="content">
+                <div class="content-title">This Website</div>
+                <div class="content-item">
+                    <div class="img-container content-left">
+                        <img src="images/website.jpg" class="content-image"></img>
+                    </div>
+                    <div class="content-text">
+                        Making a personal website has been at the back of my mind for a while tempting me to try it, and now I've finally gotten around to making one!
+                        I have no prior experience creating a website outside of a couple small experiments with HTML and Javascript, so it was fairly intimidating at first.
+                        There were various frameworks I considered to help build my website, but the challenge of making it completely from scratch in pure HTML, CSS, and Javascript was too exciting to pass up.
+                        I am also hosting the site myself on a spare raspberry pi using nginx and cloudflare's tunnel service to avoid exposing ports on my home network to the internet.
+                        It has been a fantastic learning experience, not just about how to create a website, but about how the internet as a whole works.
+                    </div>
+                </div>
+                <div class="breakline"></div>
+            </div>
+            <div class="content">
+                <div class="content-title">GEOFF</div>
+                <div class="content-item">
+                    <div class="content-text">
+                        While this was a project done for school alongside two of my friends, I still consider it the most fun and interesting project I was ever a part of.
+                        GEOFF (short for GEsture Operated Fake Firearm) is a modified Nerf turret attached to a mobile chassis, all controlled by two custom made sensor gloves.
+                        The left hand controlled the driving by making a fist and tilting your hand, while the right hand controlled aiming and shooting the turret.
+                        The aiming could either be done manually by tilting the right hand or setting it to automatically follow a trained target, and the firing was done by making a trigger pull gesture.
+                        The tilt control was achieved by using accelerometers and IMUs, and this data was fed to a microcontroller using I2C serial communication.
+                        The gesture recognition was done using flex sensors on each finger which changed resistance as they bent. They could then be used as voltage dividers, and the resulting voltage fed into an ADC and sent to a microcontroller.
+                        To control the wheel and turret motors, pulse width modulation was used to be able to run them at different speeds as desired.
+                        We used a Pixycam to allow for automatic aiming, which is a small sensor which could recognize colors and output the locations of these colors.
+                        All three parts of the device were connected over UART serial communication to an XBee radio module so that they could communicate wirelessly with each other.
+                    </div>
+                    <div class="img-container content-right">
+                        <img src="images/geoff/me_and_geoff.jpg" class="content-image"></img>
+                    </div>
+                </div>
+                <button onclick="toggle_visible('geoff')" class="img-button" id="button-geoff">Show additional images</button>
+                <div class="moreimages" id="images-geoff">
+                    <video class="additional-image" controls>
+                        <source src="images/geoff/robot_driving.mp4" type="video/mp4">
+                    </video>
+                    <video class="additional-image" controls>
+                        <source src="images/geoff/robot_shooting.mp4" type="video/mp4">
+                    </video>
+                    <img src="images/geoff/display.jpg" class="additional-image"></img>
+                    <img src="images/geoff/gloves.jpg" class="additional-image"></img>
+                    <img src="images/geoff/pixycam.jpg" class="additional-image"></img>
+                    <img src="images/geoff/overview.jpg" class="additional-image"></img>
+                    <img src="images/geoff/gestures.jpg" class="additional-image"></img>
+                </div>
+                <div class="breakline"></div>
+            </div>
+            <div class="content">
+                <div class="content-title">LZW Compressor (C++)</div>
+                <div class="content-item">
+                    <video class="img-container content-left" controls>
+                        <source src="images/lzw/video_demo.mp4" type="video/mp4">
+                    </video>
+                    <div class="content-text">
+                        As the size of video game downloads continue to grow, I have often found myself stuck with little to no space left on any of the drives in my desktop.
+                        One such case gave birth to the idea of simply compressing any files I rarely use in order to save space at the cost of taking longer to open these files.
+                        I could have easily used an existing and well respected program such as 7zip to do this, but when the idea of writing my own program to do this came to mind I knew I had to try it.
+                        Realistically I would never actually use the program to compress and decompress my files, but I knew it would be a fun challenge to make such a program anyways.
+                        I did some research on different types of compression, and decided on trying to implement compression based on the Lempel–Ziv–Welch (LZW) method.
+                        I eventually managed to get it working, and while it wasn't the most efficient algorithm ever created, it worked!
+                        Most files are unsurprisingly already very well optimized, but when running it on uncompressed text files it can oftentimes achieve a ten to twenty percent reduction in file size.
+                        In an ideal scenario (a long file of the same character repeated many times) the result can even exceed a 90% reduction in file size, but this is unrealistic for "real" data.
+                        You can view the source code on my Github page here: [INSERT GITHUB LINK]
+                    </div>
+                </div>
+                <button onclick="toggle_visible('compress')" class="img-button" id="button-compress">Show additional images</button>
+                <div class="moreimages" id="images-compress">
+                    <img src="images/lzw/image2.jpg" class="additional-image"></img>
+                    <img src="images/lzw/lorem_ipsum.jpg" class="additional-image"></img>
+                    <img src="images/lzw/mobydick.jpg" class="additional-image"></img>
+                </div>
+                <div class="breakline"></div>
+            </div>
+            <div class="content">
+                <div class="content-title">Car Finder (Python)</div>
+                <div class="content-item">
+                    <div class="img-container content-left">
+                        <img src="images/car.jpg" class="content-image"></img>
+                    </div>
+                    <div class="content-text">
+                        At the beginning of March of 2022 I was finally looking to buy my first car, but unfortunately due to supply chain issues caused by the covid-19 pandemic there was an extremely low supply of cars.
+                        After many calls ended with being told the car I wanted was already reserved by someone, I finally decided that manually searching online every day was simply too slow.
+                        And what's faster than a human at this kind of task? A computer! So I got to work writing a python script that would check the websites of nearby dealerships for new vehicles for me at the start of every hour.
+                        At the same time I was interested in creating a Discord bot to learn about how those worked, so I combined the two ideas into one project
+                        by having the discord bot message me with any vehicles matching the make and model I was interested in.
+                        And amazingly, I had a new vehicle reserved for me about 48 hours later!
+                        You can view the source code on my Github page here: [INSERT GITHUB LINK]
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer"></div>
+    </div>
+</body>
+</html>

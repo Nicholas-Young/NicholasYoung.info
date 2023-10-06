@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/home.css"/>
+    <link rel="icon" type="image/x-icon" href="/images/icon.png">
+    <script src="scripts/current.js" defer></script>
+</head>
+<body onload="set_current_page('home')">
+    <div class="grid-container">
+        <div class="background">
+            <img src="images/homepage_bg.png" alt="" class="bg_img">
+        </div>
+        <div class="background grad_right"></div>
+        <div class="background grad_top"></div>
+        <div class="background grad_bottom"></div>
+        <a class="signature" href="index.html">NicholasYoung.info</a>
+        <div class="current"></div>
+        <div class="inner"></div>
+        <div class="pages">
+            <a href="index.html" class="home" onmouseover="update_current_position_to_class('home')" onmouseleave="update_current_position()">Home</a>
+            <a href="skills.html" class="skills" onmouseover="update_current_position_to_class('skills')" onmouseleave="update_current_position()">Skills and Experience</a>
+            <a href="projects.html" class="projects" onmouseover="update_current_position_to_class('projects')" onmouseleave="update_current_position()">Projects</a>
+            <a href="hobbies.html" class="hobbies" onmouseover="update_current_position_to_class('hobbies')" onmouseleave="update_current_position()">Hobbies</a>
+            <a href="resume.html" class="resume" onmouseover="update_current_position_to_class('resume')" onmouseleave="update_current_position()">Resume</a>
+            <a href="valve.html" class="valve" onmouseover="update_current_position_to_class('valve')" onmouseleave="update_current_position()">Valve</a>
+        </div>
+        <div class="hello">Hello, I'm Nicholas!</div>
+        <div class="intro">I'm a computer engineer with a passion for fun technology and new experiences.
+            I graduated from the University of Michigan in 2021 with my masters in electrical and computer engineering with a focus on embedded systems,
+            and have had the pleasure of helping develop Intel's cutting edge processors as a hardware validation engineer ever since.
+            However, I have finally decided to pursue my dream of putting my interest in embedded systems to use creating exciting new virtual reality devices.
+            Thank you for visiting my website, and I hope you enjoy learning more about me!
+        </div>
+        <div class="findme">
+            <div class="findme-text">You can also find me at these locations:</div>
+            <div class="links">
+                <a href="https://www.linkedin.com/in/nicholas-young-64133716b/" target="_blank" class="link linkedin">
+                    <img src="images/linkedin.png" class="link-logo">
+                    <div class="link-text">Nicholas Young</div>
+                </a>
+                <a href="https://github.com/Nicholas-Young" target="_blank" class="link github">
+                    <img src="images/github.png" class="link-logo">
+                    <div class="link-text">Nicholas-Young</div>
+                </a>
+                <a href="mailto:NicholasYoung741@gmail.com" target="_blank" class="link email">
+                    <img src="images/email.png" class="link-logo">
+                    <div class="link-text">NicholasYoung741@gmail.com</div>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

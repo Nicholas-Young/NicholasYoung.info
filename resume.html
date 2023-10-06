@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/resume.css"/>
+    <link rel="icon" type="image/x-icon" href="/images/icon.png">
+    <script src="scripts/current.js" defer></script>
+</head>
+<body onload="set_current_page('resume')">
+    <div class="grid-container">
+        <div class="header_bg"></div>
+        <a class="signature" href="index.html">NicholasYoung.info</a>
+        <div class="current"></div>
+        <div class="inner"></div>
+        <div class="pages">
+            <a href="index.html" class="home" onmouseover="update_current_position_to_class('home')" onmouseleave="update_current_position()">Home</a>
+            <a href="skills.html" class="skills" onmouseover="update_current_position_to_class('skills')" onmouseleave="update_current_position()">Skills and Experience</a>
+            <a href="projects.html" class="projects" onmouseover="update_current_position_to_class('projects')" onmouseleave="update_current_position()">Projects</a>
+            <a href="hobbies.html" class="hobbies" onmouseover="update_current_position_to_class('hobbies')" onmouseleave="update_current_position()">Hobbies</a>
+            <a href="resume.html" class="resume" onmouseover="update_current_position_to_class('resume')" onmouseleave="update_current_position()">Resume</a>
+            <a href="valve.html" class="valve" onmouseover="update_current_position_to_class('valve')" onmouseleave="update_current_position()">Valve</a>
+        </div>
+        <object data="resume.pdf" type="application/pdf" class="pdf"><p class="download-link"><a href="resume.pdf">Unable to display PDF file. Click here to download instead.</a></p></object>
+        <div class="footer"></div>
+    </div>
+</body>
+</html>

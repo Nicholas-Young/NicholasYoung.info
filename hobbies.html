@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hobbies</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/others.css"/>
+    <link rel="icon" type="image/x-icon" href="/images/icon.png">
+    <script src="scripts/current.js"></script>
+    <script src="scripts/toggleimages.js" defer></script>
+    <script src="scripts/imgopen.js" defer></script>
+</head>
+<body onload="set_current_page('hobbies')">
+    <div class="grid-container">
+        <div class="header_bg"></div>
+        <a class="signature" href="index.html">NicholasYoung.info</a>
+        <div class="current"></div>
+        <div class="inner"></div>
+        <div class="pages">
+            <a href="index.html" class="home" onmouseover="update_current_position_to_class('home')" onmouseleave="update_current_position()">Home</a>
+            <a href="skills.html" class="skills" onmouseover="update_current_position_to_class('skills')" onmouseleave="update_current_position()">Skills and Experience</a>
+            <a href="projects.html" class="projects" onmouseover="update_current_position_to_class('projects')" onmouseleave="update_current_position()">Projects</a>
+            <a href="hobbies.html" class="hobbies" onmouseover="update_current_position_to_class('hobbies')" onmouseleave="update_current_position()">Hobbies</a>
+            <a href="resume.html" class="resume" onmouseover="update_current_position_to_class('resume')" onmouseleave="update_current_position()">Resume</a>
+            <a href="valve.html" class="valve" onmouseover="update_current_position_to_class('valve')" onmouseleave="update_current_position()">Valve</a>
+        </div>
+        <div class="main content">
+            <div class="content">
+                <div class="content-title">Video Games and Virtual Reality</div>
+                <div class="content-item">
+                    <div class="img-container content-left">
+                        <img src="images/games/destiny.jpg" class="content-image"></img>
+                    </div>
+                    <div class="content-text">
+                        Whether I'm just hanging out online with friends in Counter-Strike or Golf With Your Friends, or 
+                        being transported to another world in Half-Life: Alyx and Destiny 2, video games are my favorite way to pass the time.
+                        This has become especially true with the advent of consumer virtual reality, where I can put on my Valve Index and become completely immersed in an entirely new universe.
+                        Ever since trying VR for the first time years ago I have been fascinated both by the technology behind it, and the potential it has for incredible experiences.
+                        I genuinely believe it is the future of entertainment, and hope to be a part of making that future a reality.
+                    </div>
+                </div>
+                <button onclick="toggle_visible('games')" class="img-button" id="button-games">Show additional images</button>
+                <div class="moreimages" id="images-games">
+                    <img src="images/games/cs.jpg" class="additional-image"></img>
+                    <img src="images/games/btd.jpg" class="additional-image"></img>
+                    <img src="images/games/skyrim.jpg" class="additional-image"></img>
+                    <img src="images/games/trackmania.jpg" class="additional-image"></img>
+                    <video class="additional-image" controls>
+                        <source src="images/games/beatsaber.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="breakline"></div>
+            </div>
+            <div class="content">
+                <div class="content-title">Drawing</div>
+                <div class="content-item">
+                    <div class="content-text">
+                        As an engineer it is unsurprising that I enjoy creating things, but up until just over 2 months ago this had never included art of any kind.
+                        It has always been something I hoped to learn, but I lacked the confidence to actually start.
+                        But after years of putting it off, I finally convinced myself to sign up for a drawing class during July of 2023 and have been practicing ever since!
+                        I of course have a LOT to learn about drawing, but I am enjoying trying out different topics and mediums to figure out what my favorites are.
+                        Someday I hope to be able to illustrate any characters and stories that I imagine, even though this seems like a huge mountain to climb.
+                    </div>
+                    <div class="img-container content-right">
+                        <img src="images/art/shading.jpg" class="content-image"></img>
+                    </div>
+                </div>
+                <button onclick="toggle_visible('drawing')" class="img-button" id="button-drawing">Show additional images</button>
+                <div class="moreimages" id="images-drawing">
+                    <img src="images/art/stilllife.jpg" class="additional-image"></img>
+                    <img src="images/art/housething.jpg" class="additional-image"></img>
+                    <img src="images/art/maze.jpg" class="additional-image"></img>
+                    <img src="images/art/perspective.jpg" class="additional-image"></img>
+                    <img src="images/art/perspective_street.jpg" class="additional-image"></img>
+                </div>
+                <div class="breakline"></div>
+            </div>
+            <div class="content">
+                <div class="content-title">Cooking</div>
+                <div class="content-item">
+                    <div class="img-container content-left">
+                        <img src="images/food/porkchop.JPG" class="content-image"></img>
+                    </div>
+                    <div class="content-text">
+                        Most of the time after a full day of work, I really want to sit down and enjoy some delicious food. Some of those days though, I want to have fun making this food first!
+                        It started with wanting to be able to eat my favorite recipes of my mom's even while away from home, but has expanded to include all types of tastes and cuisines.
+                        From my all time favorite bacon-tomato pasta sauce to homemade kimchi to chocolate-strawberry spirals, I will gladly try making just about any recipe.
+                        Not all of them turn out well, but getting to try out different recipes and work with new ingredients is still a great experience every time.
+                    </div>
+                </div>
+                <button onclick="toggle_visible('cooking')" class="img-button" id="button-cooking">Show additional images</button>
+                <div class="moreimages" id="images-cooking">
+                    <img src="images/food/burrito.JPG" class="additional-image"></img>
+                    <img src="images/food/japanese.JPG" class="additional-image"></img>
+                    <img src="images/food/mapotofu.JPG" class="additional-image"></img>
+                    <img src="images/food/meatballs.JPG" class="additional-image"></img>
+                    <img src="images/food/chocolate.JPG" class="additional-image"></img>
+                </div>
+                <div class="breakline"></div>
+            </div>
+            <div class="content">
+                <div class="content-title">Fencing</div>
+                <div class="content-item">
+                    <div class="content-text">
+                        One of my best friends has been fencing for as long as I can remember, but it wasn't until early 2023 that I finally decided to give it a try myself.
+                        Turns out, I really enjoy swordfighting!
+                        A lot more goes into it than I had initially expected, and even now 9 months later I am still learning new things at every lesson.
+                        I have recently started practicing with the intermediate level fencers at my club, and getting to learn directly through bouts with them has been eye-opening.
+                        I lose easily ninety percent of these bouts, but I know each one is helping me grow more experienced as a fencer and get one step closer to beating them next time!
+                    </div>
+                    <div class="img-container content-right">
+                        <img src="images/fencing.jpg" class="content-image"></img>
+                    </div>
+                </div>
+                <div class="breakline"></div>
+            </div>
+            <div class="content">
+                <div class="content-title">Trying New Things</div>
+                <div class="content-item">
+                    <div class="img-container content-left">
+                        <img src="images/newthings/snowboard_1.JPG" class="content-image"></img>
+                    </div>
+                    <div class="content-text">
+                        While all of the hobbies mentioned above are things I enjoy doing, I am always searching for new experiences which I've never done before.
+                        This includes anything from learning to snowboard which I did last winter, to trying to teach myself game dev using the Godot engine,
+                        to travelling to a location I have never been to such as my study abroad trip in Japan during my undergraduate degree.
+                        While I might not keep up with every single activity as consistently as my other hobbies, seeing all the fun things the world has to offer has become a hobby in and of itself!
+                    </div>
+                </div>
+                <button onclick="toggle_visible('new')" class="img-button" id="button-new">Show additional images</button>
+                <div class="moreimages" id="images-new">
+                    <img src="images/newthings/snowboard_2.JPG" class="additional-image"></img>
+                    <img src="images/newthings/kinkakuji.jpg" class="additional-image"></img>
+                    <img src="images/newthings/japan_2.jpg" class="additional-image"></img>
+                    <img src="images/newthings/mountain.jpg" class="additional-image"></img>
+                    <img src="images/newthings/waterfall.jpg" class="additional-image"></img>
+                    <img src="images/newthings/zipline.jpg" class="additional-image"></img>
+                    <img src="images/newthings/discgolf.JPG" class="additional-image"></img>
+                </div>
+            </div>
+        </div>
+        <div class="footer"></div>
+    </div>
+</body>
+</html>

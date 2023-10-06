@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills and Experience</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/others.css"/>
+    <link rel="icon" type="image/x-icon" href="/images/icon.png">
+    <script src="scripts/current.js" defer></script>
+    <script src="scripts/toggleimages.js" defer></script>
+    <script src="scripts/imgopen.js" defer></script>
+</head>
+<body onload="set_current_page('skills')">
+    <div class="grid-container">
+        <div class="header_bg"></div>
+        <a class="signature" href="index.html">NicholasYoung.info</a>
+        <div class="current"></div>
+        <div class="inner"></div>
+        <div class="pages">
+            <a href="index.html" class="home" onmouseover="update_current_position_to_class('home')" onmouseleave="update_current_position()">Home</a>
+            <a href="skills.html" class="skills" onmouseover="update_current_position_to_class('skills')" onmouseleave="update_current_position()">Skills and Experience</a>
+            <a href="projects.html" class="projects" onmouseover="update_current_position_to_class('projects')" onmouseleave="update_current_position()">Projects</a>
+            <a href="hobbies.html" class="hobbies" onmouseover="update_current_position_to_class('hobbies')" onmouseleave="update_current_position()">Hobbies</a>
+            <a href="resume.html" class="resume" onmouseover="update_current_position_to_class('resume')" onmouseleave="update_current_position()">Resume</a>
+            <a href="valve.html" class="valve" onmouseover="update_current_position_to_class('valve')" onmouseleave="update_current_position()">Valve</a>
+        </div>
+        <div class="main content">
+            <div class="content">
+                <div class="content-title">Intel, Pre-Silicon Hardware Validation Engineer</div>
+                <div class="content-item">
+                    <div class="img-container content-left">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/7/7d/Intel_logo_%282006-2020%29.svg" class="content-image"></img>
+                    </div>
+                    <div class="content-text">
+                        May 2019 marked the beginning of my career at Intel, which was as an intern working on pre-silicon hardware validation.
+                        This internship led into a second internship the following summer, and finally my full time job with Intel once I graduated with my master's degree which is my current job.
+                        While I had no prior experience with pre-silicon validation, I was able to quickly learn and master the skills this job required to succeed.
+                        My main job at Intel is to work with my colleagues to create tests and run simulations against the model the design team created,
+                        in order to catch any bugs before the design was eventually produced in silicon.
+                        This of course requires the programming skills to create tests and checkers in Systemverilog, but being able to efficiently
+                        diagnose failures through error signatures, log file outputs, and waveforms is also vital to complete my work.
+                        Communication skills are also useful as due to the complexity of modern computer chips, I often need to communicate with
+                        teams and individuals I have never worked with in order to address issues.
+                        My immediate team often are able to help when I run into issues or otherwise become blocked, as we use the Scrum
+                        methodology for planning our tasks to ensure we could complete all of the work in a timely manner.
+                    </div>
+                </div>
+                <div class="breakline"></div>
+            </div>
+            <div class="content">
+                <div class="content-title">Programming</div>
+                <div class="content-item">
+                    <div class="content-text">
+                        I first began learning programming back in highschool when I took an introduction to programming class.
+                        The class was only half a school year long and taught everything using scratch and visual basic, but it introduced me to the fundamentals of what would become a lifelong passion.
+                        This opened up the opportunity to take AP Computer Science the next year though, which was taught in Java - the same programming language my favorite game at the time Minecraft was made in!
+                        While I unfortunately did not create the next Minecraft, I did continue learning programming as I entered college where I learned C/C++ and MatLab for the first time.
+                        C and C++ continued to be my main programming language throughout all of college, where I learned more advanced techniques, data structures, and algorithms.
+                        As my classes focused more on embedded systems I also learned Verilog and Systemverilog, the latter of which I have used extensively during my work at Intel.
+                        I also taught myself python for writing simple scripts and testing programming ideas, which has proved useful both at work and for hobby projects.
+                    </div>
+                    <div class="img-container content-right">
+                        <img src="images/skills/programming.jpg" class="content-image"></img>
+                    </div>
+                </div>
+                <div class="breakline"></div>
+            </div>
+            <div class="content">
+                <div class="content-title">Testing and Debugging</div>
+                <div class="content-item">
+                    <div class="img-container content-left">
+                        <img src="images/skills/debug.png" class="content-image"></img>
+                    </div>
+                    <div class="content-text">
+                        Much of my work at Intel revolves around writing and debugging tests, which has led to me being able to quickly identify and solve issues in code.
+                        I often need to come up with interesting test cases to see if the processor design acts the way we expect it to, and if not, helping to figure out why.
+                        Usually debugging a failure involves understanding the failure signature, searching through log files to determine when and how the program diverged
+                        from expected behavior, and viewing waveforms of signals' values throughout a simulation.
+                        While all of my work is done in Systemverilog and simulations, the testing and debugging skills I have gained extend to other languages as well.
+                        Even in programs written in languages besides Systemverilog I have become adept at noticing edge cases which may cause code to fail,
+                        and when failures happen unexpectedly, quickly reasoning through why.
+                    </div>
+                </div>
+                <div class="breakline"></div>
+            </div>
+            <div class="content">
+                <div class="content-title">Software Development Computer Skills</div>
+                <div class="content-item">
+                    <div class="content-text">
+                        As useful as the Windows operating system and GUIs are, I have become right at home using Linux and command line interfaces to interact with computers.
+                        I was introduced to them during my first college programming class, and they have been an integral part of my work ever since.
+                        They have helped me to streamline my workflow and to be capable of using many tools which I would struggle with otherwise, as well as
+                        becoming comfortable manipulating programs in more advanced ways I would not have been confident doing otherwise.
+                        Alongside these skills I also learned to use Git for version control, which has helped immensely in not only personal projects, but when working collaboratively as well.
+                        The ability to track changes over time or quickly pull in fixes from colleagues has saved me significant amounts of work in the past, and helped me quickly
+                        provide support for others as well.
+                    </div>
+                    <div class="img-container content-right">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/3/35/Tux.svg" class="content-image"></img>
+                    </div>
+                </div>
+                <div class="breakline"></div>
+            </div>
+            <div class="content">
+                <div class="content-title">Japanese</div>
+                <div class="content-item">
+                    <div class="img-container content-left">
+                        <img src="images/skills/japanese.png" class="content-image"></img>
+                    </div>
+                    <div class="content-text">
+                        日本語は少し話せます！ Very different from the other skills listed on this page, but I can speak and write basic Japanese.
+                        Michigan does not have a language requirement for engineering students, so I was originally glad that I could take more engineering classes instead.
+                        But that changed when I decided to apply for a study abroad trip in Japan, at which point I began taking Japanese lessons at the beginning of my sohpomore year of college.
+                        I ended up being accepted to the study abroad program which took place the summer after my sophomore year, and on top of that I
+                        enjoyed my Japanese classes so much I continued taking them throughout my entire time at the University of Michigan.
+                        After these classes I am capable of holding simple conversations in Japanese, but I hope to continue practicing and someday be fluent enough to talk with native speakers without trouble.
+                    </div>
+                </div>
+                <div class="breakline"></div>
+            </div>
+            <div class="content">
+                <div class="content-title">Eagle Scout</div>
+                <div class="content-item">
+                    <div class="content-text">
+                        I was a part of my local scout troop from June 2009 up until I turned 18 in June 2016.
+                        During this time I worked to advance through the ranks of scouting, eventually reaching the highest rank of Eagle Scout.
+                        In order to become an Eagle Scout, one of the requirements was to earn a total of 21 merit badges, including Citizenship in the World, Emergency Preparedness, and Communications.
+                        Some of these required me to get far out of my comfort zone, such as the swimming merit badge since I always struggled with swimming when I was younger.
+                        The other major requirement was to plan and complete a community service project, for which I replaced a damaged bridge spanning a small river in my town.
+                        This involved significant planning to ensure the project went smoothly and met all requirements, as well as leadership skills to recruit and supervise a large group of younger scouts.
+                        The final result was well received though and has seen much use since it was put in place.
+                    </div>
+                    <div class="img-container content-right">
+                        <img src="images/skills/Eagle/award.JPG" class="content-image"></img>
+                    </div>
+                </div>
+                <button onclick="toggle_visible('eagle')" class="img-button" id="button-eagle">Show additional images</button>
+                <div class="moreimages" id="images-eagle">
+                    <img src="images/skills/Eagle/bridge1.JPG" class="additional-image"></img>
+                    <img src="images/skills/Eagle/bridge2.JPG" class="additional-image"></img>
+                </div>
+            </div>
+        </div>
+        <div class="footer"></div>
+    </div>
+</body>
+</html>

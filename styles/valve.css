@@ -1,0 +1,138 @@
+* {
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+.notransition * { 
+    transition: none !important; 
+} 
+
+html {
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    min-width: 650px;
+    min-height: 1000px;
+}
+
+body {
+    background-color: black;
+    background-image: url("../images/landscape_bg.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: auto 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+a:link {
+    color: white;
+    text-decoration: none;
+}
+
+a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+a:active {
+    color: white;
+    text-decoration: none;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-rows: 5vh 1fr 3vh;
+    grid-template-columns: 1fr 8fr 1fr;
+    margin: 0px;
+    padding: 0px;
+    height: 100vh;
+}
+
+.header_bg {
+    grid-area: 1 / 1 / 2 / -1;
+    background-color: black;
+    height: 100%;
+    width: 100%;
+}
+
+.signature {
+    grid-area: 1 / 1 / 2 / 2;
+    justify-self: flex-start;
+    color: white;
+    align-self: center;
+    padding-left: 1vw;
+}
+
+.current {
+    border-radius: 20px;
+    background: linear-gradient(to bottom left, rgb(31, 186, 180), rgb(58, 148, 235));
+    position: absolute;
+    z-index: 1;
+    transition: all 0.5s;
+}
+
+.inner {
+    border-radius: 20px;
+    background: black;
+    position: absolute;
+    z-index: 2;
+    transition: all 0.5s;
+}
+
+.pages {
+    display: flex;
+    grid-area: 1 / 1 / 2 / -1;
+    width: 60vw;
+    min-width: 500px;
+    justify-self: flex-end;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 2;
+    font-size: max(1vw, 15px);
+}
+
+.main {
+    grid-area: 2 / 2 / -2 / -2;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.content-item {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex: 1;
+}
+
+.content-text {
+    width: 70%;
+    min-width: 500px;
+    flex-grow: 1;
+    color: white;
+    font-size: max(1.5em, 1.15vw);
+    text-align: justify;
+    text-align-last: center;
+}
+
+.footer {
+    grid-area: -2 / 1 / -1 / -1;
+    background-color: black;
+}

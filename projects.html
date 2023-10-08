@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=0">
     <title>Projects</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,8 +12,9 @@
     <script src="scripts/current.js" defer></script>
     <script src="scripts/toggleimages.js" defer></script>
     <script src="scripts/imgopen.js" defer></script>
+    <script src="scripts/mobile.js"></script>
 </head>
-<body onload="set_current_page('projects')">
+<body onload="mobile_other(); set_current_page('projects')">
     <div class="grid-container">
         <div class="header_bg"></div>
         <a class="signature" href="index.html">NicholasYoung.info</a>
@@ -40,13 +41,17 @@
                         There were various frameworks I considered to help build my website, but the challenge of making it completely from scratch in pure HTML, CSS, and Javascript was too exciting to pass up.
                         I am also hosting the site myself on a spare raspberry pi using nginx and cloudflare's tunnel service to avoid exposing ports on my home network to the internet.
                         It has been a fantastic learning experience, not just about how to create a website, but about how the internet as a whole works.
+                        You can see the full source code for the website on my Github: [LINK]
                     </div>
                 </div>
                 <div class="breakline"></div>
             </div>
             <div class="content">
                 <div class="content-title">GEOFF</div>
-                <div class="content-item">
+                <div class="content-item reverse">
+                    <div class="img-container content-right">
+                        <img src="images/geoff/me_and_geoff.jpg" class="content-image"></img>
+                    </div>
                     <div class="content-text">
                         While this was a project done for school alongside two of my friends, I still consider it the most fun and interesting project I was ever a part of.
                         GEOFF (short for GEsture Operated Fake Firearm) is a modified Nerf turret attached to a mobile chassis, all controlled by two custom made sensor gloves.
@@ -58,30 +63,27 @@
                         We used a Pixycam to allow for automatic aiming, which is a small sensor which could recognize colors and output the locations of these colors.
                         All three parts of the device were connected over UART serial communication to an XBee radio module so that they could communicate wirelessly with each other.
                     </div>
-                    <div class="img-container content-right">
-                        <img src="images/geoff/me_and_geoff.jpg" class="content-image"></img>
-                    </div>
                 </div>
                 <button onclick="toggle_visible('geoff')" class="img-button" id="button-geoff">Show additional images</button>
                 <div class="moreimages" id="images-geoff">
-                    <video class="additional-image" controls>
+                    <video class="additional-image" preload="metadata" controls>
                         <source src="images/geoff/robot_driving.mp4" type="video/mp4">
                     </video>
-                    <video class="additional-image" controls>
+                    <video class="additional-image" preload="metadata" controls>
                         <source src="images/geoff/robot_shooting.mp4" type="video/mp4">
                     </video>
-                    <img src="images/geoff/display.jpg" class="additional-image"></img>
-                    <img src="images/geoff/gloves.jpg" class="additional-image"></img>
-                    <img src="images/geoff/pixycam.jpg" class="additional-image"></img>
-                    <img src="images/geoff/overview.jpg" class="additional-image"></img>
-                    <img src="images/geoff/gestures.jpg" class="additional-image"></img>
+                    <img src="images/geoff/display.jpg" loading="lazy" class="additional-image"></img>
+                    <img src="images/geoff/gloves.jpg" loading="lazy" class="additional-image"></img>
+                    <img src="images/geoff/pixycam.jpg" loading="lazy" class="additional-image"></img>
+                    <img src="images/geoff/overview.jpg" loading="lazy" class="additional-image"></img>
+                    <img src="images/geoff/gestures.jpg" loading="lazy" class="additional-image"></img>
                 </div>
                 <div class="breakline"></div>
             </div>
             <div class="content">
                 <div class="content-title">LZW Compressor (C++)</div>
                 <div class="content-item">
-                    <video class="img-container content-left" controls>
+                    <video class="img-container content-left" preload="metadata" controls>
                         <source src="images/lzw/video_demo.mp4" type="video/mp4">
                     </video>
                     <div class="content-text">
@@ -98,16 +100,16 @@
                 </div>
                 <button onclick="toggle_visible('compress')" class="img-button" id="button-compress">Show additional images</button>
                 <div class="moreimages" id="images-compress">
-                    <img src="images/lzw/image2.jpg" class="additional-image"></img>
-                    <img src="images/lzw/lorem_ipsum.jpg" class="additional-image"></img>
-                    <img src="images/lzw/mobydick.jpg" class="additional-image"></img>
+                    <img src="images/lzw/image2.jpg" loading="lazy" class="additional-image"></img>
+                    <img src="images/lzw/lorem_ipsum.jpg" loading="lazy" class="additional-image"></img>
+                    <img src="images/lzw/mobydick.jpg" loading="lazy" class="additional-image"></img>
                 </div>
                 <div class="breakline"></div>
             </div>
             <div class="content">
                 <div class="content-title">Car Finder (Python)</div>
-                <div class="content-item">
-                    <div class="img-container content-left">
+                <div class="content-item reverse">
+                    <div class="img-container content-right">
                         <img src="images/car.jpg" class="content-image"></img>
                     </div>
                     <div class="content-text">

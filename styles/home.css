@@ -11,8 +11,7 @@ html, body {
     width: 100%;
     margin: 0px;
     padding: 0px;
-    min-width: 650px;
-    min-height: 1000px;
+    background-color: black;
 }
 
 a:link {
@@ -151,11 +150,9 @@ a:active {
     width: 100%;
     min-height: 0px;
     min-width: 0px;
-}
-
-.findme-text {
     color: white;
     font-size: max(20px, 1.25vw);
+    justify-self: center;
 }
 
 .links {
@@ -196,6 +193,5 @@ a:active {
 .link-text {
     min-height: 0px;
     min-width: 0px;
-    font-size: max(1vw, 15px);
     padding: 15px;
 }

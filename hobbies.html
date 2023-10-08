@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=0">
     <title>Hobbies</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,8 +12,9 @@
     <script src="scripts/current.js"></script>
     <script src="scripts/toggleimages.js" defer></script>
     <script src="scripts/imgopen.js" defer></script>
+    <script src="scripts/mobile.js"></script>
 </head>
-<body onload="set_current_page('hobbies')">
+<body onload="mobile_other(); set_current_page('hobbies')">
     <div class="grid-container">
         <div class="header_bg"></div>
         <a class="signature" href="index.html">NicholasYoung.info</a>
@@ -44,11 +45,11 @@
                 </div>
                 <button onclick="toggle_visible('games')" class="img-button" id="button-games">Show additional images</button>
                 <div class="moreimages" id="images-games">
-                    <img src="images/games/cs.jpg" class="additional-image"></img>
-                    <img src="images/games/btd.jpg" class="additional-image"></img>
-                    <img src="images/games/skyrim.jpg" class="additional-image"></img>
-                    <img src="images/games/trackmania.jpg" class="additional-image"></img>
-                    <video class="additional-image" controls>
+                    <img src="images/games/cs.jpg" loading="lazy" class="additional-image"></img>
+                    <img src="images/games/btd.jpg" loading="lazy" class="additional-image"></img>
+                    <img src="images/games/skyrim.jpg" loading="lazy" class="additional-image"></img>
+                    <img src="images/games/trackmania.jpg" loading="lazy" class="additional-image"></img>
+                    <video class="additional-image" preload="metadata" controls>
                         <source src="images/games/beatsaber.mp4" type="video/mp4">
                     </video>
                 </div>
@@ -56,7 +57,10 @@
             </div>
             <div class="content">
                 <div class="content-title">Drawing</div>
-                <div class="content-item">
+                <div class="content-item reverse">
+                    <div class="img-container content-right">
+                        <img src="images/art/shading.jpg" class="content-image"></img>
+                    </div>
                     <div class="content-text">
                         As an engineer it is unsurprising that I enjoy creating things, but up until just over 2 months ago this had never included art of any kind.
                         It has always been something I hoped to learn, but I lacked the confidence to actually start.
@@ -64,17 +68,14 @@
                         I of course have a LOT to learn about drawing, but I am enjoying trying out different topics and mediums to figure out what my favorites are.
                         Someday I hope to be able to illustrate any characters and stories that I imagine, even though this seems like a huge mountain to climb.
                     </div>
-                    <div class="img-container content-right">
-                        <img src="images/art/shading.jpg" class="content-image"></img>
-                    </div>
                 </div>
                 <button onclick="toggle_visible('drawing')" class="img-button" id="button-drawing">Show additional images</button>
                 <div class="moreimages" id="images-drawing">
-                    <img src="images/art/stilllife.jpg" class="additional-image"></img>
-                    <img src="images/art/housething.jpg" class="additional-image"></img>
-                    <img src="images/art/maze.jpg" class="additional-image"></img>
-                    <img src="images/art/perspective.jpg" class="additional-image"></img>
-                    <img src="images/art/perspective_street.jpg" class="additional-image"></img>
+                    <img src="images/art/stilllife.jpg" loading="lazy" class="additional-image"></img>
+                    <img src="images/art/housething.jpg" loading="lazy" class="additional-image"></img>
+                    <img src="images/art/maze.jpg" loading="lazy" class="additional-image"></img>
+                    <img src="images/art/perspective.jpg" loading="lazy" class="additional-image"></img>
+                    <img src="images/art/perspective_street.jpg" loading="lazy" class="additional-image"></img>
                 </div>
                 <div class="breakline"></div>
             </div>
@@ -93,26 +94,26 @@
                 </div>
                 <button onclick="toggle_visible('cooking')" class="img-button" id="button-cooking">Show additional images</button>
                 <div class="moreimages" id="images-cooking">
-                    <img src="images/food/burrito.JPG" class="additional-image"></img>
-                    <img src="images/food/japanese.JPG" class="additional-image"></img>
-                    <img src="images/food/mapotofu.JPG" class="additional-image"></img>
-                    <img src="images/food/meatballs.JPG" class="additional-image"></img>
-                    <img src="images/food/chocolate.JPG" class="additional-image"></img>
+                    <img src="images/food/burrito.JPG" loading="lazy" class="additional-image"></img>
+                    <img src="images/food/japanese.JPG" loading="lazy" class="additional-image"></img>
+                    <img src="images/food/mapotofu.JPG" loading="lazy" class="additional-image"></img>
+                    <img src="images/food/meatballs.JPG" loading="lazy" class="additional-image"></img>
+                    <img src="images/food/chocolate.JPG" loading="lazy" class="additional-image"></img>
                 </div>
                 <div class="breakline"></div>
             </div>
             <div class="content">
                 <div class="content-title">Fencing</div>
-                <div class="content-item">
+                <div class="content-item reverse">
+                    <div class="img-container content-right">
+                        <img src="images/fencing.jpg" class="content-image"></img>
+                    </div>
                     <div class="content-text">
                         One of my best friends has been fencing for as long as I can remember, but it wasn't until early 2023 that I finally decided to give it a try myself.
                         Turns out, I really enjoy swordfighting!
                         A lot more goes into it than I had initially expected, and even now 9 months later I am still learning new things at every lesson.
                         I have recently started practicing with the intermediate level fencers at my club, and getting to learn directly through bouts with them has been eye-opening.
                         I lose easily ninety percent of these bouts, but I know each one is helping me grow more experienced as a fencer and get one step closer to beating them next time!
-                    </div>
-                    <div class="img-container content-right">
-                        <img src="images/fencing.jpg" class="content-image"></img>
                     </div>
                 </div>
                 <div class="breakline"></div>
@@ -132,13 +133,13 @@
                 </div>
                 <button onclick="toggle_visible('new')" class="img-button" id="button-new">Show additional images</button>
                 <div class="moreimages" id="images-new">
-                    <img src="images/newthings/snowboard_2.JPG" class="additional-image"></img>
-                    <img src="images/newthings/kinkakuji.jpg" class="additional-image"></img>
-                    <img src="images/newthings/japan_2.jpg" class="additional-image"></img>
-                    <img src="images/newthings/mountain.jpg" class="additional-image"></img>
-                    <img src="images/newthings/waterfall.jpg" class="additional-image"></img>
-                    <img src="images/newthings/zipline.jpg" class="additional-image"></img>
-                    <img src="images/newthings/discgolf.JPG" class="additional-image"></img>
+                    <img src="images/newthings/snowboard_2.JPG" loading="lazy" class="additional-image"></img>
+                    <img src="images/newthings/kinkakuji.jpg" loading="lazy" class="additional-image"></img>
+                    <img src="images/newthings/japan_2.jpg" loading="lazy" class="additional-image"></img>
+                    <img src="images/newthings/mountain.jpg" loading="lazy" class="additional-image"></img>
+                    <img src="images/newthings/waterfall.jpg" loading="lazy" class="additional-image"></img>
+                    <img src="images/newthings/zipline.jpg" loading="lazy" class="additional-image"></img>
+                    <img src="images/newthings/discgolf.JPG" loading="lazy" class="additional-image"></img>
                 </div>
             </div>
         </div>

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=1">
     <title>Home</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -10,11 +10,12 @@
     <link rel="stylesheet" href="styles/home.css"/>
     <link rel="icon" type="image/x-icon" href="/images/icon.png">
     <script src="scripts/current.js" defer></script>
+    <script src="scripts/mobile.js"></script>
 </head>
-<body onload="set_current_page('home')">
+<body onload="mobile_home(); set_current_page('home')">
     <div class="grid-container">
         <div class="background">
-            <img src="images/homepage_bg.png" alt="" class="bg_img">
+            <img src="images/homepage_bg.png" alt="" loading="lazy" class="bg_img">
         </div>
         <div class="background grad_right"></div>
         <div class="background grad_top"></div>
@@ -30,7 +31,7 @@
             <a href="resume.html" class="resume" onmouseover="update_current_position_to_class('resume')" onmouseleave="update_current_position()">Resume</a>
             <a href="valve.html" class="valve" onmouseover="update_current_position_to_class('valve')" onmouseleave="update_current_position()">Valve</a>
         </div>
-        <div class="hello">Hello, I'm Nicholas!</div>
+        <div class="hello" id="hello">Hello, I'm Nicholas!</div>
         <div class="intro">I'm a computer engineer with a passion for fun technology and new experiences.
             I graduated from the University of Michigan in 2021 with my masters in electrical and computer engineering with a focus on embedded systems,
             and have had the pleasure of helping develop Intel's cutting edge processors as a hardware validation engineer ever since.

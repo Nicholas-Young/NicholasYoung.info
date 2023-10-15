@@ -101,6 +101,7 @@ a:active {
     grid-area: 2 / 2 / -2 / -2;
     margin-top: 10px;
     margin-bottom: 20px;
+    justify-self: center;
 }
 
 .content {
@@ -123,10 +124,9 @@ a:active {
 
 .content-text {
     width: 70%;
-    min-width: 500px;
     flex-grow: 1;
     color: white;
-    font-size: max(1.5em, 1.15vw);
+    font-size: max(1.15vw, 25px);
     text-align: justify;
     text-align-last: center;
 }

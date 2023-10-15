@@ -1,3 +1,20 @@
+if (is_mobile()) {
+    var fileName = location.href.split("/").slice(-1);
+
+    if(fileName == "skills.html" || fileName == "projects.html" || fileName == "hobbies.html") {
+        mobile_other();
+    }
+    else if(fileName == "resume.html") {
+        mobile_header();
+    }
+    else if(fileName == "valve.html") {
+        mobile_valve();
+    }
+    else {
+        mobile_home();
+    }
+}
+
 //Regex for detecting mobile browser, from detectmobilebrowsers.com
 function is_mobile() {
     let check = false;
@@ -6,59 +23,55 @@ function is_mobile() {
 };
 
 function mobile_header() {
-    if(is_mobile()) {
-        var signature = document.getElementsByClassName("signature")[0];
-        signature.style.display = "none";
+    var signature = document.getElementsByClassName("signature")[0];
+    signature.style.display = "none";
 
-        var pages = document.getElementsByClassName("pages")[0];
-        pages.style.width = "100%";
-        pages.style.minWidth = "0px";
-        pages.style.fontSize = "max(1vw, 10px)";
-    }
+    var pages = document.getElementsByClassName("pages")[0];
+    pages.style.width = "100%";
+    pages.style.minWidth = "0px";
+    pages.style.fontSize = "max(1vw, 10px)";
 }
 
 function mobile_home() {
     mobile_header();
-    if (is_mobile()) {
-        var hello = document.getElementsByClassName("hello")[0];
-        hello.style.gridArea = "3 / 1 / 4 / -1";
-        hello.style.width = "90%";
+    var hello = document.getElementsByClassName("hello")[0];
+    hello.style.gridArea = "3 / 1 / 4 / -1";
+    hello.style.width = "90%";
 
-        var intro = document.getElementsByClassName("intro")[0];
-        intro.style.gridArea = "4 / 1 / 5 / -1";
-        intro.style.marginRight = "0px";
-        intro.style.width = "90%";
-        intro.style.fontSize = "max(15px, 1vw)";
+    var intro = document.getElementsByClassName("intro")[0];
+    intro.style.gridArea = "4 / 1 / 5 / -1";
+    intro.style.marginRight = "0px";
+    intro.style.width = "90%";
+    intro.style.fontSize = "max(15px, 1vw)";
 
-        var findme = document.getElementsByClassName("findme")[0];
-        findme.style.gridArea = "5 / 1 / 6 / -1"
-        findme.style.width = "90%";
-        findme.style.fontSize = "max(1vw, 10px)";
+    var findme = document.getElementsByClassName("findme")[0];
+    findme.style.gridArea = "5 / 1 / 6 / -1"
+    findme.style.width = "90%";
+    findme.style.fontSize = "max(1vw, 10px)";
 
-        var linkedin = document.getElementsByClassName("linkedin")[0];
-        linkedin.style.outlineWidth = "thin";
+    var linkedin = document.getElementsByClassName("linkedin")[0];
+    linkedin.style.outlineWidth = "thin";
 
-        var github = document.getElementsByClassName("github")[0];
-        github.style.outlineWidth = "thin";
+    var github = document.getElementsByClassName("github")[0];
+    github.style.outlineWidth = "thin";
 
-        var email = document.getElementsByClassName("email")[0];
-        email.style.outlineWidth = "thin";
-    }
+    var email = document.getElementsByClassName("email")[0];
+    email.style.outlineWidth = "thin";
 }
 
 function mobile_other() {
     mobile_header();
-    if(is_mobile()) {
-        var main = document.getElementsByClassName("main")[0];
-        main.style.gridArea = "2 / 1 / -2 / -1";
-        main.style.width = "90%";
-    }
+    var main = document.getElementsByClassName("main")[0];
+    main.style.gridArea = "2 / 1 / -2 / -1";
+    main.style.width = "90%";
 }
 
-function mobile_resume() {
+function mobile_valve() {
     mobile_header();
-    if(is_mobile()) {
-        var resume = document.getElementsByTagName("pdf")[0];
-        resume.style.height = "100%";
-    }
+    var content_text = document.getElementsByClassName("content-text")[0];
+    content_text.style.fontSize = "max(0.5vw, 15px)";
+
+    var main = document.getElementsByClassName("main")[0];
+    main.style.gridArea = "2 / 1 / -2 / -1";
+    main.style.width = "90%";
 }

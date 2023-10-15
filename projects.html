@@ -9,24 +9,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/others.css"/>
     <link rel="icon" type="image/x-icon" href="/images/icon.png">
-    <script src="scripts/current.js" defer></script>
     <script src="scripts/toggleimages.js" defer></script>
     <script src="scripts/imgopen.js" defer></script>
-    <script src="scripts/mobile.js"></script>
+    <script src="scripts/mobile.js" defer></script>
+    <script src="scripts/current.js" defer></script>
 </head>
-<body onload="mobile_other(); set_current_page('projects')">
+<body>
     <div class="grid-container">
         <div class="header_bg"></div>
         <a class="signature" href="index.html">NicholasYoung.info</a>
         <div class="current"></div>
         <div class="inner"></div>
         <div class="pages">
-            <a href="index.html" class="home" onmouseover="update_current_position_to_class('home')" onmouseleave="update_current_position()">Home</a>
-            <a href="skills.html" class="skills" onmouseover="update_current_position_to_class('skills')" onmouseleave="update_current_position()">Skills and Experience</a>
-            <a href="projects.html" class="projects" onmouseover="update_current_position_to_class('projects')" onmouseleave="update_current_position()">Projects</a>
-            <a href="hobbies.html" class="hobbies" onmouseover="update_current_position_to_class('hobbies')" onmouseleave="update_current_position()">Hobbies</a>
-            <a href="resume.html" class="resume" onmouseover="update_current_position_to_class('resume')" onmouseleave="update_current_position()">Resume</a>
-            <a href="valve.html" class="valve" onmouseover="update_current_position_to_class('valve')" onmouseleave="update_current_position()">Valve</a>
+            <a href="index.html" class="home">Home</a>
+            <a href="skills.html" class="skills">Skills and Experience</a>
+            <a href="projects.html" class="projects">Projects</a>
+            <a href="hobbies.html" class="hobbies">Hobbies</a>
+            <a href="resume.html" class="resume">Resume</a>
+            <a href="valve.html" class="valve">Valve</a>
         </div>
         <div class="main content">
             <div class="content">
@@ -41,7 +41,8 @@
                         There were various frameworks I considered to help build my website, but the challenge of making it completely from scratch in pure HTML, CSS, and Javascript was too exciting to pass up.
                         I am also hosting the site myself on a spare raspberry pi using nginx and cloudflare's tunnel service to avoid exposing ports on my home network to the internet.
                         It has been a fantastic learning experience, not just about how to create a website, but about how the internet as a whole works.
-                        You can see the full source code for the website on my Github: [LINK]
+                        You can see the full source code for the website on my Github:
+                        <br/><a href="https://github.com/Nicholas-Young/NicholasYoung.info" target="_blank">https://github.com/Nicholas-Young/NicholasYoung.info</a>
                     </div>
                 </div>
                 <div class="breakline"></div>
@@ -95,7 +96,8 @@
                         I eventually managed to get it working, and while it wasn't the most efficient algorithm ever created, it worked!
                         Most files are unsurprisingly already very well optimized, but when running it on uncompressed text files it can oftentimes achieve a ten to twenty percent reduction in file size.
                         In an ideal scenario (a long file of the same character repeated many times) the result can even exceed a 90% reduction in file size, but this is unrealistic for "real" data.
-                        You can view the source code on my Github page here: [INSERT GITHUB LINK]
+                        You can view the source code on my Github page here:
+                        <br/><a href="https://github.com/Nicholas-Young/compressor" target="_blank">https://github.com/Nicholas-Young/compressor</a>
                     </div>
                 </div>
                 <button onclick="toggle_visible('compress')" class="img-button" id="button-compress">Show additional images</button>
@@ -119,7 +121,8 @@
                         At the same time I was interested in creating a Discord bot to learn about how those worked, so I combined the two ideas into one project
                         by having the discord bot message me with any vehicles matching the make and model I was interested in.
                         And amazingly, I had a new vehicle reserved for me about 48 hours later!
-                        You can view the source code on my Github page here: [INSERT GITHUB LINK]
+                        You can view the source code on my Github page here:
+                        <br/><a href="https://github.com/Nicholas-Young/CarFinder" target="_blank">https://github.com/Nicholas-Young/CarFinder</a>
                     </div>
                 </div>
             </div>

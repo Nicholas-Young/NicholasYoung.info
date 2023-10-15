@@ -9,13 +9,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/home.css"/>
     <link rel="icon" type="image/x-icon" href="/images/icon.png">
+    <script src="scripts/mobile.js" defer></script>
     <script src="scripts/current.js" defer></script>
-    <script src="scripts/mobile.js"></script>
 </head>
-<body onload="mobile_home(); set_current_page('home')">
+<body>
     <div class="grid-container">
         <div class="background">
-            <img src="images/homepage_bg.png" alt="" loading="lazy" class="bg_img">
+            <img src="images/homepage_bg.png" alt="" class="bg_img">
         </div>
         <div class="background grad_right"></div>
         <div class="background grad_top"></div>
@@ -24,12 +24,12 @@
         <div class="current"></div>
         <div class="inner"></div>
         <div class="pages">
-            <a href="index.html" class="home" onmouseover="update_current_position_to_class('home')" onmouseleave="update_current_position()">Home</a>
-            <a href="skills.html" class="skills" onmouseover="update_current_position_to_class('skills')" onmouseleave="update_current_position()">Skills and Experience</a>
-            <a href="projects.html" class="projects" onmouseover="update_current_position_to_class('projects')" onmouseleave="update_current_position()">Projects</a>
-            <a href="hobbies.html" class="hobbies" onmouseover="update_current_position_to_class('hobbies')" onmouseleave="update_current_position()">Hobbies</a>
-            <a href="resume.html" class="resume" onmouseover="update_current_position_to_class('resume')" onmouseleave="update_current_position()">Resume</a>
-            <a href="valve.html" class="valve" onmouseover="update_current_position_to_class('valve')" onmouseleave="update_current_position()">Valve</a>
+            <a href="index.html" class="home">Home</a>
+            <a href="skills.html" class="skills">Skills and Experience</a>
+            <a href="projects.html" class="projects">Projects</a>
+            <a href="hobbies.html" class="hobbies">Hobbies</a>
+            <a href="resume.html" class="resume">Resume</a>
+            <a href="valve.html" class="valve">Valve</a>
         </div>
         <div class="hello" id="hello">Hello, I'm Nicholas!</div>
         <div class="intro">I'm a computer engineer with a passion for fun technology and new experiences.

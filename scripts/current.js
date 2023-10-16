@@ -1,5 +1,4 @@
 var current_page;
-var ready = 0;
 var fileName = location.href.split("/").slice(-1);
 
 if(fileName == "skills.html") {
@@ -21,7 +20,7 @@ else {
     current_page = 'home';
 }
 
-setTimeout(snap_update_current_position, 50);
+setTimeout(snap_update_current_position, 100);
 
 document.getElementsByClassName("home")[0].addEventListener("mouseover", function() {update_current_position_to_class("home")});
 document.getElementsByClassName("skills")[0].addEventListener("mouseover", function() {update_current_position_to_class("skills")});
@@ -45,11 +44,6 @@ function disable_transitions() {
 
 function enable_transitions() {
     document.body.classList.remove("notransition");
-}
-
-function double_update() {
-    snap_update_current_position();
-    setTimeout(snap_update_current_position, 100);
 }
 
 function update_current_position_to_class(classname) {

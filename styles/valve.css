@@ -16,7 +16,7 @@ html {
 
 body {
     background-color: black;
-    background-image: url("../images/landscape_bg.png");
+    background-image: url("../images/landscape_bg.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: auto 100%;
@@ -126,7 +126,7 @@ a:active {
     width: 70%;
     flex-grow: 1;
     color: white;
-    font-size: max(1.15vw, 25px);
+    font-size: max(2.5vw, 50px);
     text-align: justify;
     text-align-last: center;
 }

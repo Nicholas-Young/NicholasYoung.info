@@ -69,7 +69,7 @@ function mobile_other() {
 function mobile_valve() {
     mobile_header();
     var content_text = document.getElementsByClassName("content-text")[0];
-    content_text.style.fontSize = "max(0.5vw, 15px)";
+    content_text.style.fontSize = "max(1vw, 20px)";
 
     var main = document.getElementsByClassName("main")[0];
     main.style.gridArea = "2 / 1 / -2 / -1";

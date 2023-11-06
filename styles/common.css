@@ -1,16 +1,45 @@
-body {
-    margin: 0px;
-    padding: 0px;
-    background-color: black;
+/* Basic page setup */
+* {
+    font-family: 'Red Hat Display', sans-serif;
 }
 
-.grid-container {
-    display: grid;
-    grid-template-rows: 5vh 92vh 3vh;
-    grid-template-columns: 1fr 8fr 1fr;
+.notransition * { 
+    transition: none !important; 
+} 
+
+html {
+    height: 100%;
+    width: 100%;
     margin: 0px;
     padding: 0px;
-    width: 100vw;
+}
+
+a:link {
+    color: white;
+    text-decoration: none;
+}
+
+a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+a:active {
+    color: white;
+    text-decoration: none;
+}
+
+/* Header */
+.header_bg {
+    grid-area: 1 / 1 / 2 / -1;
+    background-color: black;
+    height: 100%;
+    width: 100%;
 }
 
 .signature {
@@ -48,25 +77,4 @@ body {
     align-items: center;
     z-index: 2;
     font-size: max(1vw, 15px);
-}
-
-.pdf {
-    grid-area: 2 / 1 / -2 / -1;
-    height: 100%;
-    width: 100%;
-}
-
-.footer {
-    grid-area: -2 / 1 / -1 / -1;
-    background-color: black;
-}
-
-p {
-    text-align: center;
-}
-
-.download-link {
-    color: white;
-    text-align: center;
-    text-decoration: underline;
 }

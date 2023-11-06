@@ -20,7 +20,12 @@ else {
     current_page = 'home';
 }
 
-setTimeout(snap_update_current_position, 100);
+if (is_mobile()) {
+    setTimeout(snap_update_current_position, 250);
+}
+else {
+    snap_update_current_position();
+}
 
 document.getElementsByClassName("home")[0].addEventListener("mouseover", function() {update_current_position_to_class("home")});
 document.getElementsByClassName("skills")[0].addEventListener("mouseover", function() {update_current_position_to_class("skills")});

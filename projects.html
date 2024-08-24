@@ -27,7 +27,6 @@
             <a href="projects.html" class="projects">Projects</a>
             <a href="hobbies.html" class="hobbies">Hobbies</a>
             <a href="resume.html" class="resume">Resume</a>
-            <a href="valve.html" class="valve">Valve</a>
         </div>
         <div class="main content">
             <div class="content">
@@ -82,10 +81,38 @@
                 </div>
                 <div class="breakline"></div>
             </div>
+			<div class="content">
+                <div class="content-title">BrainStorm</div>
+                <div class="content-item">
+                    <div class="img-container content-left">
+                        <img src="images/eeg/render.jpg" class="content-image"></img>
+                    </div>
+                    <div class="content-text">
+                        This was the other major embedded systems project I worked on while studying at the University of Michigan.
+						I worked alongside 4 classmates to design, build, and program an electroencephalogram (EEG) which could be comfortably worn like earbuds.
+						An EEG is a device which records the minute fluctuations in electric signals in the brain, which can be used to determine information about the user's brain activity.
+						Our device collected this data via electrodes, whose signals were sent to an analog digital converter to be turned into a signal which could be more easily processed.
+						The output of this ADC was sent to a low-power microprocessor running the FreeRTOS operating system, which then sent it to a bluetooth chip.
+						The data sent to the bluetooth chip was wrapped in a command telling the bluetooth chip to send it as raw serial data, to be received by a host computer for processing.
+						To connect everything, we designed a printed cirtcuit board and had it manufactured for us, which we then soldered all of the chips and other required electrical components on to.
+						All of this was powered by a rechargable lithium-polymer battery, and everything was housed in a custom made, 3D printed casing.
+						After all the components were brought together, we were able to successfully demonstrate the device collecting data on activity in the brain and sending it to a host computer to plot this data.
+						A simple demonstration we came up with was having the user relax such that their brain waves fell in the alpha wave range of about 8 to 13 Hz,
+						then having them blink or clench their jaw which caused the brain activity to increase and fall into the beta wave range of 13 to 30 Hz.
+                    </div>
+                </div>
+                <button onclick="toggle_visible('eeg')" class="img-button" id="button-eeg">Show additional images</button>
+                <div class="moreimages" id="images-eeg">
+					<img src="images/eeg/waves.jpg" loading="lazy" class="additional-image"></img>
+                    <img src="images/eeg/poster.jpg" loading="lazy" class="additional-image"></img>
+					<img src="images/eeg/pcb.jpg" loading="lazy" class="additional-image"></img>
+                </div>
+                <div class="breakline"></div>
+            </div>
             <div class="content">
                 <div class="content-title">LZW Compressor (C++)</div>
-                <div class="content-item">
-                    <video class="img-container content-left" preload="metadata" controls>
+                <div class="content-item reverse">
+                    <video class="img-container content-right" preload="metadata" controls>
                         <source src="images/lzw/video_demo.mp4" type="video/mp4">
                     </video>
                     <div class="content-text">
@@ -111,8 +138,8 @@
             </div>
             <div class="content">
                 <div class="content-title">Car Finder (Python)</div>
-                <div class="content-item reverse">
-                    <div class="img-container content-right">
+                <div class="content-item">
+                    <div class="img-container content-left">
                         <img src="images/car.jpg" class="content-image"></img>
                     </div>
                     <div class="content-text">

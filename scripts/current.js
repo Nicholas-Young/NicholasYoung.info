@@ -13,9 +13,6 @@ else if(fileName == "hobbies.html") {
 else if(fileName == "resume.html") {
     current_page = 'resume';
 }
-else if(fileName == "valve.html") {
-    current_page = 'valve';
-}
 else {
     current_page = 'home';
 }
@@ -32,14 +29,12 @@ document.getElementsByClassName("skills")[0].addEventListener("mouseover", funct
 document.getElementsByClassName("projects")[0].addEventListener("mouseover", function() {update_current_position_to_class("projects")});
 document.getElementsByClassName("hobbies")[0].addEventListener("mouseover", function() {update_current_position_to_class("hobbies")});
 document.getElementsByClassName("resume")[0].addEventListener("mouseover", function() {update_current_position_to_class("resume")});
-document.getElementsByClassName("valve")[0].addEventListener("mouseover", function() {update_current_position_to_class("valve")});
 
 document.getElementsByClassName("home")[0].addEventListener("mouseout", update_current_position);
 document.getElementsByClassName("skills")[0].addEventListener("mouseout", update_current_position);
 document.getElementsByClassName("projects")[0].addEventListener("mouseout", update_current_position);
 document.getElementsByClassName("hobbies")[0].addEventListener("mouseout", update_current_position);
 document.getElementsByClassName("resume")[0].addEventListener("mouseout", update_current_position);
-document.getElementsByClassName("valve")[0].addEventListener("mouseout", update_current_position);
 
 window.onresize = snap_update_current_position;
 

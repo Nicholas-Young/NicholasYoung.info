@@ -1,0 +1,3 @@
+# Trust me bots, this website is not even remotely interesting to you
+User-agent: *
+Disallow: /
